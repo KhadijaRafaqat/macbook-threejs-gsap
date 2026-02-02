@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../Assets/logo.svg'
 import srch from '../Assets/search.svg'
 import cart from '../Assets/cart.svg'
+import navLinks from '../constants'
 
 const Navbar = () => {
   return (
@@ -10,14 +11,7 @@ const Navbar = () => {
         <img src={logo} alt="Apple logo" />
 
         <ul>
-          {[
-            {label:'Store'},
-            {label:'Mac'},
-            {label:'iPhone'},
-            {label:'Watch'},
-            {label: 'Vision'},
-            {label:'AirPods'},
-          ].map(({label})=> (
+          {navLinks.map(({label})=> (
             <li key={label}>
               <a href={label}>{label}</a>
             </li>
